@@ -8,6 +8,8 @@
 --   putStrLn ("Hello, " ++ name)
 
 main :: IO ()
-main = putStrLn "Enter your name" >>
-  getLine >>= \name ->
-  putStrLn ("Hello, " ++ name)
+main =
+  putStrLn "Enter your name"
+    >> getLine
+    >>= \name ->
+      putStrLn ("Hello, " ++ name)

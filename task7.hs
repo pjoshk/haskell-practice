@@ -13,4 +13,3 @@ instance Describable TrafficLight where
   describe Red = "Stop!"
   describe Yellow = "Wait"
   describe Green = "Go!"
- 

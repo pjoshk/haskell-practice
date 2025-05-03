@@ -7,7 +7,6 @@ main :: IO ()
 main = loop
 
 loop :: IO ()
-
 loop = do
   putStrLn "How's your mood now? [Sad | Happy | Neutral]"
   input <- getLine

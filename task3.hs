@@ -6,7 +6,7 @@ main = do
   print (mySum list)
   print (myMap myDouble list)
 
-data MyList a = Empty | Cons a (MyList a) deriving Show 
+data MyList a = Empty | Cons a (MyList a) deriving (Show)
 
 list :: MyList Int
 list = Cons 2 (Cons 3 (Cons 4 Empty))

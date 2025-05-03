@@ -1,4 +1,3 @@
-
 main :: IO ()
 main = do
   print list
@@ -9,7 +8,7 @@ main = do
   print (pop list)
   print (list !! 3)
 
-list = [1,2,3,4,5]
+list = [1, 2, 3, 4, 5]
 
 -- CRUD
 push :: Int -> [Int] -> [Int]
@@ -22,11 +21,10 @@ len :: [Int] -> Int
 len xs = sum [1 | x <- xs]
 
 update :: Int -> Int -> [Int] -> [Int]
-update a i arr = take i arr ++ [a] ++ drop (i+1) arr
+update a i arr = take i arr ++ [a] ++ drop (i + 1) arr
 
 remove :: Int -> [Int] -> [Int]
-remove i arr = take i arr ++ drop (i+1) arr
+remove i arr = take i arr ++ drop (i + 1) arr
 
 pop :: [Int] -> [Int]
 pop arr = take (len arr - 1) arr
-

@@ -6,9 +6,10 @@ main = do
   print (area (Rectangle 3 4))
   putStrLn (lightAction Red)
 
-data Shape = Circle Float
+data Shape
+  = Circle Float
   | Rectangle Float Float
-  deriving Show 
+  deriving (Show)
 
 area :: Shape -> Float
 area (Circle r) = pi * r * r

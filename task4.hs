@@ -5,20 +5,23 @@ main = do
   print tree
   print (treeSize tree)
   print (treeSum tree)
-  print (treeMap (*2) tree)
+  print (treeMap (* 2) tree)
 
-data BTree a = Empty | Node a (BTree a) (BTree a) deriving Show
+data BTree a = Empty | Node a (BTree a) (BTree a) deriving (Show)
 
 leaf :: a -> BTree a
 leaf x = Node x Empty Empty
 
 tree :: BTree Int
-tree = Node 1
-  (Node 2
-    (leaf 8)
-    Empty)
-  Empty
-
+tree =
+  Node
+    1
+    ( Node
+        2
+        (leaf 8)
+        Empty
+    )
+    Empty
 
 treeSize :: BTree a -> Int
 treeSize Empty = 0
