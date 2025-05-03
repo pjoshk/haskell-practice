@@ -1,3 +1,7 @@
+-- input/output
+-- parsing string to int
+-- case statements
+
 main :: IO ()
 
 main = do
@@ -6,8 +10,9 @@ main = do
   putStrLn ("Hi" ++ input)
   putStrLn "What is your favorite number?"
   input <- getLine
-  let num = read input :: Int
-  putStrLn ("Double: " ++ show(num * 2))
+  case reads input of
+    [(n, "")] -> putStrLn("you got a " ++ show(n * 2))
+    _ -> putStrLn "That's not a valid number"
 
   
 
